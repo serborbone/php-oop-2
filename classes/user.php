@@ -16,6 +16,7 @@
 
     }
 
+    // Controllo se l'utente è registrato e se true assegno il valore 20 all'attributo $discount
     public function checkRegistered($checkRegistered) {
     
       if ($this->registered !== $checkRegistered) {

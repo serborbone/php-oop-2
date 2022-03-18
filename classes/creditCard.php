@@ -30,6 +30,19 @@
       return $this->cardExpireYear = $expireYear;
 
     }
+
+    public function checkExpired() {
+    
+      $expiration = DateTime::createFromFormat('m-y', $this->cardExpireMonth. '-'. $this->cardExpireYear);
+      $currentTime = new DateTime();
+
+      if ($expiration < $currentTime) {
+
+        echo 'Attenzione: La carta di credito inserita è scaduta!';
+
+      }
+
+    }
   
   }
 

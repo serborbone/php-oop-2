@@ -14,6 +14,7 @@
   $user = new user('Mario', 'Rossi', 'mariorossi@email.it');
   $creditCard = new creditCard();
 
+
   //USER
 
   //se è true l'attributo $registered di user assume valore true e il valore di $discount è 20
@@ -24,7 +25,10 @@
   $creditCard->getcardName('Mario');
   $creditCard->getcardLastName('Rossi');
   $creditCard->getExpireMonth('07');
-  $creditCard->getExpireYear('2025');
+  $creditCard->getExpireYear('25');
+
+//Controllo se la carta di credito è scaduta
+  $creditCard->checkExpired();
 
 
   // FOOD
@@ -42,10 +46,12 @@
   $accessories->setAnimal('Coniglio');
   $accessories->getDiscount($user->discount);
 
+  /*
   var_dump($food);
   var_dump($toy);
   var_dump($accessories);
   var_dump($user);
   var_dump($creditCard);
+  */
 
 ?>
